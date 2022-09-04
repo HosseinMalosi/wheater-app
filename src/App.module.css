@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;800&family=Roboto:wght@100;300;400;500;900&display=swap");
+
+:root {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  --largerFont: 2.8rem;
+  --largeFont: 2.2rem;
+  --MedFont: 1.8rem;
+  --LmdFont: 1.6rem;
+  --SmFont: 1.3rem;
+  --OSFont: "Open Sans", sans-serif;
+  --RBFont: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+  position: relative;
+}
+
+/* Navigation-Componet */
+
+.header {
+  display: flex;
+  position: absolute;
+  z-index: 9;
+  right: 0;
+  left: 0;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  max-height: 20vh;
+  padding: 10px;
+  box-shadow: -4px 10px 10px -6px rgba(0, 0, 0, 0.3);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+  text-decoration: none;
+}
+
+.logo h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-family: var(--RBFont);
+}
+
+.logo svg {
+  font-size: var(--largerFont);
+  color: #000;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+  list-style: none;
+  font-size: var(--MedFont);
+  padding: 0;
+}
+
+.header ul li svg {
+  color: #000;
+}
+
+/* HomePage */
+
+/* homeSearch */
+
+.homeSec {
+  display: flex;
+  flex-direction: column;
+  width: clamp(50vw, 80%, 90vw);
+  margin: 20px auto;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeSec div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.homeSec div h2 {
+  font-family: var(--OSFont);
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  font-size: var(--largerFont);
+}
+
+.homeSec form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.homeSec form input {
+  outline: none;
+  width: clamp(50%, 75%, 100%);
+  font-size: var(--LmdFont);
+  font-family: var(--OSFont);
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 20px;
+  top: 0px;
+}
+.homeSec form button {
+  position: absolute;
+  cursor: pointer;
+  right: 12%;
+  top: 24%;
+  border: none;
+  background-color: white;
+}
+
+.homeSec form button svg {
+  font-size: var(--MedFont);
+}
