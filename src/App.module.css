@@ -13,6 +13,12 @@
   --RBFont: "Roboto", sans-serif;
   box-sizing: border-box;
 }
+.root{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 main {
   height: 100vh;
   position: relative;
@@ -22,7 +28,6 @@ main {
 
 .header {
   display: flex;
-  position: absolute;
   z-index: 9;
   right: 0;
   left: 0;

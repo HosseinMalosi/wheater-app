@@ -6,15 +6,19 @@ import classes from "../../App.module.css";
 import Button from "../../UI/Button";
 import Input from "../../UI/Input";
 import { FiSearch } from "react-icons/fi";
+import { useHistory, useParams } from "react-router-dom";
 
 const HomeSearch = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
+  const params = useParams()
   const cityRef = useRef();
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    dispatch(fetchData(cityRef.current.value))
-    console.log('hi');
+    console.log(params);
+    dispatch(fetchData(cityRef.current.value));
+    history.push(`/home/${cityRef.current.value}`);
   };
 
   return (
